@@ -1,3 +1,7 @@
+Com certeza! Aqui está o README do **Chatbot Brigada de Incêndio** atualizado com o link para o site.
+
+---
+
 # 🤖 Chatbot Brigada de Incêndio
 
 Chatbot especializado em Brigada de Incêndio Empresarial, desenvolvido com arquitetura separada entre Front-End e Back-End, integrando a API da Groq para geração de respostas inteligentes.
@@ -15,6 +19,12 @@ O sistema é composto por:
 - **Back-End**: Servidor Flask que consome a API da Groq para gerar respostas inteligentes.
 
 A aplicação foi desenvolvida para oferecer uma experiência de conversação realista, com respostas rápidas e precisas, limitando-se estritamente ao tema de segurança contra incêndio em empresas.
+
+---
+
+### Demonstração
+
+Acesse o chatbot em produção: [**https://chatbot-brigada-incendio.netlify.app/**](https://chatbot-brigada-incendio.netlify.app/)
 
 ---
 
@@ -181,6 +191,10 @@ Projeto desenvolvido para estudo, experimentação com APIs de Inteligência Art
 ### About the Project
 
 This project is a specialized chatbot for Corporate Fire Brigades, developed to provide information about prevention, firefighting, emergency evacuation, workplace first aid, and related technical standards (such as Fire Department ITs and NR-23).
+
+### Live Demo
+
+Access the chatbot in production: [**https://chatbot-brigada-incendio.netlify.app/**](https://chatbot-brigada-incendio.netlify.app/)
 
 ### Features
 
