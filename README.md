@@ -1,6 +1,6 @@
 # 🤖 Chatbot Brigada de Incêndio
 
-Chatbot especializado em Brigada de Incêndio Empresarial, desenvolvido com HTML, CSS, JavaScript (Front-End) e Python com Flask (Back-End), integrando a API da Groq para geração de respostas inteligentes.
+Chatbot especializado em Brigada de Incêndio Empresarial, desenvolvido com arquitetura separada entre Front-End e Back-End, integrando a API da Groq para geração de respostas inteligentes.
 
 ---
 
@@ -66,14 +66,16 @@ A aplicação utiliza o modelo `openai/gpt-oss-120b` da Groq, com configuraçõe
 ### Estrutura do Projeto
 
 ```
-chatbot-brigada/
-├── index.html          # Página principal
-├── style.css           # Estilos completos
-├── script.js           # Lógica do front-end
-├── app.py              # Servidor Flask (back-end)
-├── requirements.txt    # Dependências Python
-├── .env                # Variáveis de ambiente (GROQ_API_KEY)
-└── README.md           # Documentação do projeto
+chatbot-brigada-incendio/
+├── frontend/
+│   ├── index.html          # Página principal
+│   ├── style.css           # Estilos completos
+│   └── script.js           # Lógica do front-end
+├── backend/
+│   ├── app.py              # Servidor Flask (back-end)
+│   └── requirements.txt    # Dependências Python
+├── .env                    # Variáveis de ambiente (GROQ_API_KEY)
+└── README.md               # Documentação do projeto
 ```
 
 ---
@@ -83,43 +85,41 @@ chatbot-brigada/
 #### Pré-requisitos
 
 - Python 3.8 ou superior
-- Node.js (opcional, apenas para desenvolvimento front-end)
 - Conta na Groq Cloud com API Key
 
 #### Passo a Passo
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/chatbot-brigada.git
-   cd chatbot-brigada
+   git clone https://github.com/seu-usuario/chatbot-brigada-incendio.git
+   cd chatbot-brigada-incendio
    ```
 
-2. **Crie e ative um ambiente virtual:**
+2. **Configure o Back-End:**
    ```bash
+   cd backend
    python -m venv venv
    source venv/bin/activate  # Linux/Mac
    venv\Scripts\activate     # Windows
-   ```
-
-3. **Instale as dependências:**
-   ```bash
    pip install -r requirements.txt
    ```
 
-4. **Configure a chave da API:**
-   Crie um arquivo `.env` na raiz do projeto:
+3. **Configure a chave da API:**
+   Crie um arquivo `.env` na raiz do projeto (chatbot-brigada-incendio/):
    ```
    GROQ_API_KEY=sua-chave-aqui
    ```
 
-5. **Inicie o servidor backend:**
+4. **Inicie o servidor backend:**
    ```bash
    python app.py
    ```
    O servidor estará disponível em `http://localhost:5000`
 
-6. **Abra o front-end:**
-   Abra o arquivo `index.html` diretamente no navegador ou sirva com um servidor local.
+5. **Abra o front-end:**
+   - Navegue até a pasta `frontend/`
+   - Abra o arquivo `index.html` diretamente no navegador
+   - Ou utilize um servidor local (ex: Live Server no VS Code)
 
 ---
 
@@ -158,12 +158,6 @@ O assistente foi programado para atuar estritamente como especialista em Brigada
 ### Desenvolvimento com IA
 
 Este projeto foi desenvolvido com o auxílio de Inteligência Artificial generativa. A IA atuou como ferramenta de apoio à implementação, enquanto as instruções, requisitos, regras de negócio e decisões de arquitetura foram definidas pelo desenvolvedor.
-
----
-
-### Demonstração
-
-Em breve: link para deploy
 
 ---
 
@@ -212,17 +206,33 @@ This project is a specialized chatbot for Corporate Fire Brigades, developed to 
 #### Back-End
 - Python 3, Flask, Flask-CORS, Groq SDK, Gunicorn
 
+### Project Structure
+
+```
+chatbot-brigada-incendio/
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── backend/
+│   ├── app.py
+│   └── requirements.txt
+├── .env
+└── README.md
+```
+
 ### Installation
 
 ```bash
-git clone https://github.com/seu-usuario/chatbot-brigada.git
-cd chatbot-brigada
+git clone https://github.com/seu-usuario/chatbot-brigada-incendio.git
+cd chatbot-brigada-incendio
+cd backend
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
 ```
 
-Create a `.env` file:
+Create a `.env` file in the root directory:
 ```
 GROQ_API_KEY=your-api-key
 ```
@@ -232,7 +242,7 @@ Run the server:
 python app.py
 ```
 
-Open `index.html` in your browser.
+Open `frontend/index.html` in your browser.
 
 ---
 
