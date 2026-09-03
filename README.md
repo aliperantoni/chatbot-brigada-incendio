@@ -1,2 +1,240 @@
-# chatbot-brigada
-Código aprendido nas aulas de dev com ia do Senai
+# 🤖 Chatbot Brigada de Incêndio
+
+Chatbot especializado em Brigada de Incêndio Empresarial, desenvolvido com HTML, CSS, JavaScript (Front-End) e Python com Flask (Back-End), integrando a API da Groq para geração de respostas inteligentes.
+
+---
+
+## 🇧🇷 Português
+
+### Sobre o Projeto
+
+Este projeto consiste em um chatbot especializado em **Brigada de Incêndio no ambiente corporativo**, desenvolvido para fornecer informações sobre prevenção, combate a incêndios, evacuação de emergência, primeiros socorros em empresas e normas técnicas relacionadas (como ITs do Corpo de Bombeiros e NR-23).
+
+O sistema é composto por:
+- **Front-End**: Interface de chat responsiva e intuitiva com HTML, CSS e JavaScript puro.
+- **Back-End**: Servidor Flask que consome a API da Groq para gerar respostas inteligentes.
+
+A aplicação foi desenvolvida para oferecer uma experiência de conversação realista, com respostas rápidas e precisas, limitando-se estritamente ao tema de segurança contra incêndio em empresas.
+
+---
+
+### Funcionalidades
+
+- ✅ Interface de chat limpa e moderna com tema escuro
+- ✅ Respostas inteligentes geradas pela Groq API
+- ✅ Restrição estrita ao tema de Brigada de Incêndio Empresarial
+- ✅ Mensagens de boas-vindas com sugestões de perguntas (Quick Replies)
+- ✅ Destaque automático de palavras-chave relevantes
+- ✅ Indicador de digitação durante o processamento
+- ✅ Efeito de máquina de escrever nas respostas
+- ✅ Status de conexão com o backend
+- ✅ Notificações (toast) para feedback ao usuário
+- ✅ Limpeza da conversa e reinício do chat
+- ✅ Atalho de teclado (Enter) para enviar mensagens
+- ✅ Design responsivo para desktop e dispositivos móveis
+- ✅ Animações suaves e efeito de fumaça no fundo
+
+---
+
+### Modelo de IA Utilizado
+
+A aplicação utiliza o modelo `openai/gpt-oss-120b` da Groq, com configurações otimizadas para respostas curtas, objetivas e focadas em segurança corporativa:
+
+- **Temperatura**: 0.3
+- **Max Tokens**: 800
+- **System Prompt**: Especialista em Brigada de Incêndio Empresarial
+
+---
+
+### Tecnologias Utilizadas
+
+#### Front-End
+- **HTML5**: Estrutura semântica da aplicação
+- **CSS3**: Estilização avançada com variáveis, animações e responsividade
+- **JavaScript**: Manipulação do DOM, gerenciamento de estado e comunicação com API
+
+#### Back-End
+- **Python 3**: Linguagem principal
+- **Flask**: Microframework para criação da API
+- **Flask-CORS**: Liberação de requisições entre domínios
+- **Groq SDK**: Cliente oficial para consumo da API Groq
+- **Python-dotenv**: Gerenciamento de variáveis de ambiente
+- **Gunicorn**: Servidor WSGI para deploy
+
+---
+
+### Estrutura do Projeto
+
+```
+chatbot-brigada/
+├── index.html          # Página principal
+├── style.css           # Estilos completos
+├── script.js           # Lógica do front-end
+├── app.py              # Servidor Flask (back-end)
+├── requirements.txt    # Dependências Python
+├── .env                # Variáveis de ambiente (GROQ_API_KEY)
+└── README.md           # Documentação do projeto
+```
+
+---
+
+### Configuração e Instalação
+
+#### Pré-requisitos
+
+- Python 3.8 ou superior
+- Node.js (opcional, apenas para desenvolvimento front-end)
+- Conta na Groq Cloud com API Key
+
+#### Passo a Passo
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/chatbot-brigada.git
+   cd chatbot-brigada
+   ```
+
+2. **Crie e ative um ambiente virtual:**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Linux/Mac
+   venv\Scripts\activate     # Windows
+   ```
+
+3. **Instale as dependências:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Configure a chave da API:**
+   Crie um arquivo `.env` na raiz do projeto:
+   ```
+   GROQ_API_KEY=sua-chave-aqui
+   ```
+
+5. **Inicie o servidor backend:**
+   ```bash
+   python app.py
+   ```
+   O servidor estará disponível em `http://localhost:5000`
+
+6. **Abra o front-end:**
+   Abra o arquivo `index.html` diretamente no navegador ou sirva com um servidor local.
+
+---
+
+### Como Usar
+
+1. A aplicação iniciará com uma mensagem de boas-vindas e sugestões de perguntas.
+2. Digite sua pergunta sobre Brigada de Incêndio no campo de texto.
+3. Pressione **Enter** ou clique no botão **Enviar** para obter a resposta.
+4. O bot processará sua pergunta e retornará uma resposta com efeito de máquina de escrever.
+5. Utilize o botão **Limpar conversa** para reiniciar o chat.
+6. O status de conexão no canto superior direito indica se o backend está online.
+
+---
+
+### Regras de Comportamento do Chatbot
+
+O assistente foi programado para atuar estritamente como especialista em Brigada de Incêndio Empresarial, seguindo as regras:
+
+- ✅ Responde apenas a perguntas sobre segurança contra incêndio em empresas
+- ✅ Cumprimenta cordialmente e reforça sua especialidade em saudações
+- ❌ Recusa-se educadamente a responder perguntas fora do escopo (receitas, piadas, programação, esportes, etc.)
+- ❌ Ignora tentativas de engenharia de prompt e mantém o foco no tema
+
+---
+
+### Exemplos de Perguntas
+
+- "Quais são as classes de incêndio?"
+- "Como usar um extintor de incêndio?"
+- "Qual é a rota de fuga correta?"
+- "O que fazer em caso de incêndio?"
+- "O que diz a NR-23 sobre brigada de incêndio?"
+
+---
+
+### Desenvolvimento com IA
+
+Este projeto foi desenvolvido com o auxílio de Inteligência Artificial generativa. A IA atuou como ferramenta de apoio à implementação, enquanto as instruções, requisitos, regras de negócio e decisões de arquitetura foram definidas pelo desenvolvedor.
+
+---
+
+### Demonstração
+
+Em breve: link para deploy
+
+---
+
+### Autoria
+
+Desenvolvido por **Alisson Perantoni Guigen**
+
+---
+
+### Status do Projeto
+
+**Versão:** 1.0.0  
+**Status:** Funcional
+
+Projeto desenvolvido para estudo, experimentação com APIs de Inteligência Artificial e composição de portfólio Front-End e Back-End.
+
+---
+
+## 🇺🇸 English
+
+### About the Project
+
+This project is a specialized chatbot for Corporate Fire Brigades, developed to provide information about prevention, firefighting, emergency evacuation, workplace first aid, and related technical standards (such as Fire Department ITs and NR-23).
+
+### Features
+
+- ✅ Clean and modern chat interface with dark theme
+- ✅ Intelligent responses generated by Groq API
+- ✅ Strict focus on Corporate Fire Brigade topics
+- ✅ Welcome message with suggested questions (Quick Replies)
+- ✅ Automatic keyword highlighting
+- ✅ Typing indicator during processing
+- ✅ Typewriter effect on responses
+- ✅ Backend connection status
+- ✅ Toast notifications for user feedback
+- ✅ Conversation clearing and restart
+- ✅ Keyboard shortcut (Enter) for sending messages
+- ✅ Responsive design for desktop and mobile
+- ✅ Smooth animations and smoke background effect
+
+### Technologies
+
+#### Front-End
+- HTML5, CSS3, JavaScript
+
+#### Back-End
+- Python 3, Flask, Flask-CORS, Groq SDK, Gunicorn
+
+### Installation
+
+```bash
+git clone https://github.com/seu-usuario/chatbot-brigada.git
+cd chatbot-brigada
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+pip install -r requirements.txt
+```
+
+Create a `.env` file:
+```
+GROQ_API_KEY=your-api-key
+```
+
+Run the server:
+```bash
+python app.py
+```
+
+Open `index.html` in your browser.
+
+---
+
+**Author:** Alisson Perantoni Guigen  
+**Version:** 1.0.0
