@@ -12,7 +12,7 @@ const statusDot = document.getElementById("statusDot");
 const statusText = document.getElementById("statusText");
 const toastContainer = document.getElementById("toastContainer");
 
-const API_URL = "http://127.0.0.1:5000/chat";
+const API_URL = "https://chatbot-brigada-incendio-o5mv.onrender.com";
 
 const mensagemInicial =
   "Olá! Sou um assistente especializado em Brigada de Incêndio em Empresas. Posso ajudar com dúvidas sobre prevenção, evacuação, extintores, classes de incêndio e procedimentos básicos de emergência.";
