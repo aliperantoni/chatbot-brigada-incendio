@@ -1,7 +1,3 @@
-Com certeza! Aqui está o README do **Chatbot Brigada de Incêndio** atualizado com o link para o site.
-
----
-
 # 🤖 Chatbot Brigada de Incêndio
 
 Chatbot especializado em Brigada de Incêndio Empresarial, desenvolvido com arquitetura separada entre Front-End e Back-End, integrando a API da Groq para geração de respostas inteligentes.
